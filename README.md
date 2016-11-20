@@ -9,3 +9,12 @@ Implementations of deep learning models:
 - Denoising Autoencoder
 - Restricted Boltzman Machine
 - Deep Boltzman Machine
+
+Run RBM:
+python RBM.py
+
+Run Autoencoder:
+python Autoencoder.py
+
+Run 1-layer NN:
+python NN.py

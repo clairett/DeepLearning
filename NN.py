@@ -21,10 +21,10 @@ def sigmoid(x):
 def build_1Layer_model(regularizer=False, reg_lambda=0.1, random_seed=0, epoch=100, batch_size=10, print_loss=False, epsilon=0.1, alpha=0.5, dropout=False, nn_hdim=100):
     np.random.seed(random_seed)
 
-    W1 = np.loadtxt('dauto_weight.txt', dtype='float')
+    # W1 = np.loadtxt('dauto_weight.txt', dtype='float')
     # W1 = np.loadtxt('auto_weight.txt', dtype='float')
     # W1 = np.loadtxt('weight.txt', dtype='float')  # RBM initialization
-    #W1 = np.random.uniform(-math.sqrt(6.0/(nn_input_dim+nn_hdim)), math.sqrt(6.0/(nn_input_dim+nn_hdim)), [nn_input_dim, nn_hdim])
+    W1 = np.random.uniform(-math.sqrt(6.0/(nn_input_dim+nn_hdim)), math.sqrt(6.0/(nn_input_dim+nn_hdim)), [nn_input_dim, nn_hdim])
     b1 = np.zeros((1, nn_hdim))
     W2 = np.random.uniform(-math.sqrt(6.0/(nn_hdim+nn_output_dim)), math.sqrt(6.0/(nn_hdim+nn_output_dim)), [nn_hdim, nn_output_dim])
     b2 = np.zeros((1, nn_output_dim))

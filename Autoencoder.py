@@ -40,6 +40,8 @@ class Autoencoder(object):
             X_batch = self.X[row]
 
             # forward propagation
+            # by setting dropout = 0: autoencoder
+            # by setting dropout > 0: denoising autoencoder
             tilde_x = self.get_corrupted_input(X_batch, dropout)
             a1 = np.dot(tilde_x, self.W1) + self.b1
             h1 = self.sigmoid(a1)
