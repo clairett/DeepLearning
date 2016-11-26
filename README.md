@@ -7,7 +7,9 @@ Implementations of deep learning models:
 - 2-layer Neural Network
 - Autoencoder
 - Denoising Autoencoder
-- Restricted Boltzman Machine
+- Restricted Boltzman Machine 
+  - CD-k
+  - Persistent CD Algorithm
 - Deep Boltzman Machine
 
 Run RBM:
