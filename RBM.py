@@ -70,7 +70,7 @@ def train_RBM(trainset=None, devset=None, seed=2, num_hidden=100, epochs=100, le
 
     # persistent chains
     v = np.random.binomial(1, 0.5, (insize, K))
-
+    
     train_error, dev_error = [], []
 
     for epoch in xrange(epochs):
@@ -85,6 +85,9 @@ def train_RBM(trainset=None, devset=None, seed=2, num_hidden=100, epochs=100, le
             X_batch = X_train[:, rows]  # mini-batch
 
             _, v = gibbs_sampling(v, model, gs_step)
+            
+            # CD-k
+            # _, v = gibbs_sampling(X_batch, model, gs_step)
 
             h_X_batch = sigmoid(np.dot(W.T, X_batch) + hbias)
             h_v = sigmoid(hbias + np.dot(W.T, v) + hbias)
