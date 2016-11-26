@@ -1,6 +1,6 @@
 # DeepLearning
 
-A brief introduction of deep learning
+A brief introduction of deep learning algorithms.
 
 Implementations of deep learning models:
 - 1-layer Neural Network
